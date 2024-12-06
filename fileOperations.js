@@ -12,4 +12,8 @@ function writeFile(filePath, content){
 
 }
 
+function readFile(filePath) {
+    return fs.readFileSync(filePath, 'utf8');
+}
+
 module.exports = {writeFile};
