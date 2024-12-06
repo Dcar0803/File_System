@@ -23,6 +23,13 @@ function readFile(filePath) {
 }
 
 
+/**
+ * Counts the number of lines in a file.
+ * @param {string} filePath - The path to the file.
+ * @returns {number} The number of lines in the file.
+ */
+
+
 function countLines(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     return content.split('\n').length;
