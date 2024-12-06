@@ -35,4 +35,4 @@ function countLines(filePath) {
     return content.split('\n').length;
 }
 
-module.exports = {writeFile , readFile};
+module.exports = {writeFile , readFile, countLines};
