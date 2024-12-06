@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { writeFile, readFile } = require('../fileOperations');
+const { writeFile, readFile, countLines } = require('../fileOperations');
 
 describe('File Operations', () => {
     const testFilePath = path.join(__dirname, 'testFileWrite.txt');
@@ -23,6 +23,14 @@ describe('File Operations', () => {
         fs.writeFileSync(testFilePath, expectedContent);
         const readContent = readFile(testFilePath);
         expect(readContent).toBe(expectedContent);
+    });//end of test
+
+
+    test('should count the number of lines in a file', () => {
+        const multilineContent = `Line 1\nLine 2\nLine 3`;
+        fs.writeFileSync(testFilePath, multilineContent);
+        const lineCount = countLines(testFilePath);
+        expect(lineCount).toBe(3);
     });//end of test
 
 
