@@ -12,6 +12,12 @@ function writeFile(filePath, content){
 
 }
 
+/**
+ * Reads and returns content from a specified file
+ * @param {string} filePath  -The path to the file
+ * @returns  {string} The content of the file.
+ */
+
 function readFile(filePath) {
     return fs.readFileSync(filePath, 'utf8');
 }
