@@ -22,4 +22,10 @@ function readFile(filePath) {
     return fs.readFileSync(filePath, 'utf8');
 }
 
+
+function countLines(filePath) {
+    const content = fs.readFileSync(filePath, 'utf8');
+    return content.split('\n').length;
+}
+
 module.exports = {writeFile , readFile};
